@@ -46,3 +46,30 @@
     width: 90%;
   }
 }
+
+.popup {
+  border: 1px solid #474545;
+  background-color: #ddd5d5;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.method {
+  display: flex;
+  column-gap: 7px;
+}
+
+.btn {
+  width: 90%;
+  margin: 10px auto;
+  background-color: red;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.btn:disabled {
+  background-color: #555;
+}

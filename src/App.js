@@ -15,6 +15,7 @@ import './App.css'
 class App extends Component {
   state = {
     cartList: [],
+    isOrderPlaced: false,
   }
 
   decrementCartItemQuantity = id => {
@@ -73,13 +74,19 @@ class App extends Component {
     this.setState({cartList: []})
   }
 
+  toggleOrder = () => {
+    this.setState(pre => ({isOrderPlaced: !pre.isOrderPlaced}))
+  }
+
   render() {
-    const {cartList} = this.state
+    const {cartList, isOrderPlaced} = this.state
 
     return (
       <CartContext.Provider
         value={{
           cartList,
+          isOrderPlaced,
+          toggleOrder: this.toggleOrder,
           addCartItem: this.addCartItem,
           removeCartItem: this.removeCartItem,
           removeAllCartItems: this.removeAllCartItems,

@@ -67,3 +67,12 @@
     display: block;
   }
 }
+
+.primary {
+  background-color: rgb(25, 111, 177);
+  color: #ffffff;
+}
+
+.order-placed-msg {
+  color: green;
+}

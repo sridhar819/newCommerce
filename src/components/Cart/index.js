@@ -18,9 +18,7 @@ const Cart = () => (
         <>
           <Header />
           <div className="cart-container">
-            {showEmptyView ? (
-              <EmptyCartView />
-            ) : (
+            {!showEmptyView ? (
               <div className="cart-content-container">
                 <h1 className="cart-heading">My Cart</h1>
                 <button
@@ -35,6 +33,8 @@ const Cart = () => (
                 {/* TODO: Add your code for Cart Summary here */}
                 <CartSummary />
               </div>
+            ) : (
+              <EmptyCartView />
             )}
           </div>
         </>
